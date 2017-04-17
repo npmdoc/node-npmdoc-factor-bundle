@@ -1,9 +1,11 @@
 # api documentation for  [factor-bundle (v2.5.0)](https://github.com/substack/factor-bundle)  [![npm package](https://img.shields.io/npm/v/npmdoc-factor-bundle.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-factor-bundle) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-factor-bundle.svg)](https://travis-ci.org/npmdoc/node-npmdoc-factor-bundle)
 #### factor browser-pack bundles into common shared bundles
 
-[![NPM](https://nodei.co/npm/factor-bundle.png?downloads=true)](https://www.npmjs.com/package/factor-bundle)
+[![NPM](https://nodei.co/npm/factor-bundle.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/factor-bundle)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-factor-bundle/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-factor-bundle_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-factor-bundle/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-factor-bundle/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-factor-bundle/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-factor-bundle/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-factor-bundle/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-factor-bundle/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +20,6 @@
 {
     "author": {
         "name": "James Halliday",
-        "email": "mail@substack.net",
         "url": "http://substack.net"
     },
     "bin": {
@@ -72,17 +73,14 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "substack",
-            "email": "mail@substack.net"
+            "name": "substack"
         },
         {
-            "name": "terinjokes",
-            "email": "terinjokes@gmail.com"
+            "name": "terinjokes"
         }
     ],
     "name": "factor-bundle",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/substack/factor-bundle.git"
@@ -93,16 +91,6 @@
     "version": "2.5.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module factor-bundle](#apidoc.module.factor-bundle)
-
-
-
-# <a name="apidoc.module.factor-bundle"></a>[module factor-bundle](#apidoc.module.factor-bundle)
 
 
 
