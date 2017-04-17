@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/substack/factor-bundle"
-
-    >factor-bundle (v2.5.0)</a>
+    <a href="https://github.com/substack/factor-bundle">factor-bundle (v2.5.0)</a>
 </h1>
 <h4>factor browser-pack bundles into common shared bundles</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.factor-bundle">module factor-bundle</a><ol>
 
@@ -109,7 +102,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function f(b, opts) {
     if (!opts) opts = {};
-    if (typeof b === &#x27;string&#x27; || Array.isArray(b)) {
+    if (typeof b === 'string' || Array.isArray(b)) {
         return createStream(b, opts)
     }
 
@@ -130,19 +123,19 @@
           hasExports: true
         });
 
-    b.on(&#x27;reset&#x27;, addHooks);
+    b.on('reset', addHooks);
     addHooks();
 
     function addHooks () {
-        b.pipeline.get(&#x27;record&#x27;).push(through.obj(function(row, enc, next) {
-            if (row.file &#x26;&#x26; needRecords) {
+        b.pipeline.get('record').push(through.obj(function(row, enc, next) {
+            if (row.file &amp;&amp; needRecords) {
                 files.push(row.file);
             }
             next(null, row);
         }, function(next) {
             var outopt = defined(opts.outputs, opts.output, opts.o);
 
-            if (typeof outopt === &#x27;function&#x27;) {
+            if (typeof outopt === 'function') {
                 outopt = outopt();
             }
 
@@ -165,11 +158,11 @@
 
             var pipelines = files.reduce(function (acc, x, ix) {
                 var pipeline = splicer.obj([
-                    &#x27;pack&#x27;, [ pack(packOpts) ],
-                    &#x27;wrap&#x27;, []
+                    'pack', [ pack(packOpts) ],
+                    'wrap', []
                 ]);
 
-                if (ix &#x3e;= outputs.length) {
+                if (ix &gt;= outputs.length) {
                     outputs.push.apply(outputs, moreOutputs(x));
                 }
                 if (outputs[ix]) pipeline.pipe(outputs[ix]);
@@ -182,22 +175,22 @@
             b._bpack.hasExports = true;
 
             Object.keys(pipelines).forEach(function (id) {
-                b.emit(&#x27;factor.pipeline&#x27;, id, pipelines[id]);
+                b.emit('factor.pipeline', id, pipelines[id]);
             });
 
             var s = createStream(files, opts);
-            s.on(&#x27;stream&#x27;, function (bundle) {
+            s.on('stream', function (bundle) {
                 bundle.pipe(pipelines[bundle.file]);
             });
 
-            b.pipeline.get(&#x27;pack&#x27;).unshift(s);
+            b.pipeline.get('pack').unshift(s);
 
             if (needRecords) files = [];
 
             next();
         }));
 
-        b.pipeline.get(&#x27;label&#x27;).push(through.obj(function(row, enc, next) {
+        b.pipeline.get('label').push(through.obj(function(row, enc, next) {
             opts.rmap[row.id] = path.resolve(cwd, row.file);
             next(null, row);
         }));
@@ -223,13 +216,13 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-b.plugin(&#x27;factor-bundle&#x27;, { outputs: [ write(&#x27;x&#x27;), write(&#x27;y&#x27;) ] });
-b.bundle().pipe(write(&#x27;common&#x27;));
+b.plugin('factor-bundle', { outputs: [ write('x'), write('y') ] });
+b.bundle().pipe(write('common'));
 
 function write (name) {
     return concat(function (body) {
-        console.log(&#x27;// ----- &#x27; + name + &#x27; -----&#x27;);
-        console.log(body.<span class="apidocCodeKeywordSpan">toString</span>(&#x27;utf8&#x27;));
+        console.log('// ----- ' + name + ' -----');
+        console.log(body.<span class="apidocCodeKeywordSpan">toString</span>('utf8'));
     });
 }
 ```
@@ -257,13 +250,13 @@ You can use factor-bundle as a browserify plugin:
     <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-b.plugin(&#x27;factor-bundle&#x27;, { outputs: [ write(&#x27;x&#x27;), write(&#x27;y&#x27;) ] });
-b.bundle().pipe(write(&#x27;common&#x27;));
+b.plugin('factor-bundle', { outputs: [ write('x'), write('y') ] });
+b.bundle().pipe(write('common'));
 
 function write (name) {
     return concat(function (body) {
-        console.log(&#x27;// ----- &#x27; + name + &#x27; -----&#x27;);
-        console.log(body.<span class="apidocCodeKeywordSpan">toString</span>(&#x27;utf8&#x27;));
+        console.log('// ----- ' + name + ' -----');
+        console.log(body.<span class="apidocCodeKeywordSpan">toString</span>('utf8'));
     });
 }
 ```
@@ -283,3 +276,4 @@ You can use factor-bundle as a browserify plugin:
     ]
 </div>
 </div>
+</body></html>
