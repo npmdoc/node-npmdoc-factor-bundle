@@ -1,4 +1,7 @@
-# api documentation for  [factor-bundle (v2.5.0)](https://github.com/substack/factor-bundle)  [![npm package](https://img.shields.io/npm/v/npmdoc-factor-bundle.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-factor-bundle) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-factor-bundle.svg)](https://travis-ci.org/npmdoc/node-npmdoc-factor-bundle)
+# npmdoc-factor-bundle
+
+#### basic api documentation for  [factor-bundle (v2.5.0)](https://github.com/substack/factor-bundle)  [![npm package](https://img.shields.io/npm/v/npmdoc-factor-bundle.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-factor-bundle) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-factor-bundle.svg)](https://travis-ci.org/npmdoc/node-npmdoc-factor-bundle)
+
 #### factor browser-pack bundles into common shared bundles
 
 [![NPM](https://nodei.co/npm/factor-bundle.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/factor-bundle)
